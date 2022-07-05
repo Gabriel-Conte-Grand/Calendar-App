@@ -12,15 +12,15 @@ export const LoginScreen = () => {
     // manejo de forms de login y register!
 
     const [ formLoginValues, handleLoginInputChange ] = useForm( {
-        lEmail: 'gabriel@gmail.com',
-        lPassword: '123456',
+        lEmail: '',
+        lPassword: '',
     } );
     
     const [ formRegisterValues, handleRegisterInputChange ] = useForm( {
-        rName: 'Gabo',
-        rEmail: 'gabriel@gmail.com',
-        rPassword1: '123456',
-        rPassword2: '123456',
+        rName: '',
+        rEmail: '',
+        rPassword1: '',
+        rPassword2: '',
     } );
     
     
@@ -47,13 +47,13 @@ export const LoginScreen = () => {
         <div className="container login-container">
             <div className="row">
                 <div className="col-md-6 login-form-1">
-                    <h3>Ingreso</h3>
+                    <h3>Log In</h3>
                     <form onSubmit={ handleLogin }>
                         <div className="form-group">
                             <input 
                                 type="text"
                                 className="form-control"
-                                placeholder="Correo"
+                                placeholder="Email"
                                 name="lEmail"
                                 value= {lEmail}
                                 onChange={handleLoginInputChange}
@@ -63,7 +63,7 @@ export const LoginScreen = () => {
                             <input
                                 type="password"
                                 className="form-control"
-                                placeholder="Contraseña"
+                                placeholder="Password"
                                 name="lPassword"
                                 value= {lPassword}
                                 onChange={handleLoginInputChange}
@@ -80,13 +80,13 @@ export const LoginScreen = () => {
                 </div>
 
                 <div className="col-md-6 login-form-2">
-                    <h3>Registro</h3>
+                    <h3>Register</h3>
                     <form onSubmit={ handleRegister }>
                         <div className="form-group">
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Nombre"
+                                placeholder="Name"
                                 name='rName'
                                 value={ rName }
                                 onChange={ handleRegisterInputChange}    
@@ -96,7 +96,7 @@ export const LoginScreen = () => {
                             <input
                                 type="email"
                                 className="form-control"
-                                placeholder="Correo"
+                                placeholder="Email"
                                 name='rEmail'
                                 value={ rEmail }
                                 onChange={ handleRegisterInputChange}    
@@ -106,7 +106,7 @@ export const LoginScreen = () => {
                             <input
                                 type="password"
                                 className="form-control"
-                                placeholder="Contraseña"
+                                placeholder="Password"
                                 name = "rPassword1"
                                 value = { rPassword1 } 
                                 onChange={ handleRegisterInputChange}    
@@ -117,7 +117,7 @@ export const LoginScreen = () => {
                             <input
                                 type="password"
                                 className="form-control"
-                                placeholder="Repita la contraseña" 
+                                placeholder="Repeat password" 
                                 name='rPassword2'
                                 value = { rPassword2 }
                                 onChange={ handleRegisterInputChange}    
@@ -128,7 +128,7 @@ export const LoginScreen = () => {
                             <input 
                                 type="submit" 
                                 className="btnSubmit" 
-                                value="Crear cuenta" />
+                                value="Create account" />
                         </div>
                     </form>
                 </div>

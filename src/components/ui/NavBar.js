@@ -21,8 +21,8 @@ export const NavBar = () => {
     <button className='btn btn-danger'
     onClick={ handleLogout }
     >
-        <i className="fa fa-sign-out-alt "> </i>
-        <span>Salir</span>
+        <i className="fa fa-sign-out-alt mr-1"> </i>
+        <span>Log out</span>
     </button>
     </div>
   )

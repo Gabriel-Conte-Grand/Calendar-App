@@ -137,7 +137,7 @@ export const CalendarModal = () => {
 <form className="container" onSubmit={ handleSubmit }>
 
     <div className="form-group">
-        <label>Fecha y hora inicio</label>
+        <label>Start date and time</label>
         <DateTimePicker onChange={ handleStartDate }
          value={ startDate } 
          className='form-control'
@@ -146,7 +146,7 @@ export const CalendarModal = () => {
     </div>
 
     <div className="form-group">
-        <label>Fecha y hora fin</label>
+        <label>End date and time</label>
         <DateTimePicker onChange={ handleEndDAte }
          value={ endDate } 
          minDate={ startDate }
@@ -157,30 +157,30 @@ export const CalendarModal = () => {
 
     <hr />
     <div className="form-group">
-        <label>Titulo y notas</label>
+        <label>Title and notes</label>
         <input 
             type="text" 
             className={ `form-control ${ !titleValid && 'is-invalid' }`}
-            placeholder="Título del evento"
+            placeholder="Event title"
             name="title"
             autoComplete="off"
             value={title}
             onChange={ handleInputChange }
         />
-        <small id="emailHelp" className="form-text text-muted">Una descripción corta</small>
+        <small id="emailHelp" className="form-text text-muted">A short description</small>
     </div>
 
     <div className="form-group">
         <textarea 
             type="text" 
             className="form-control"
-            placeholder="Notas"
+            placeholder="Notes"
             rows="5"
             name="notes"
             value={notes}
             onChange={ handleInputChange }
         ></textarea>
-        <small id="emailHelp" className="form-text text-muted">Información adicional</small>
+        <small id="emailHelp" className="form-text text-muted">Extra info</small>
     </div>
 
     <button
@@ -188,7 +188,7 @@ export const CalendarModal = () => {
         className="btn btn-outline-primary btn-block"
     >
         <i className="far fa-save"></i>
-        <span> Guardar</span>
+        <span> Save </span>
     </button>
 
 </form>
